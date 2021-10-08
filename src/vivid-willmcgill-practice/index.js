@@ -45,7 +45,7 @@ createCustomElement('vivid-willmcgill-practice', {
 		'TABLE_SUCCESS': (coeffects) => {
 			const {updateProperties} = coeffects;
 			const {items} = coeffects.action.payload.result;
-			alert(JSON.stringify(items));
+			
 			updateProperties({
 				items: items
 			})
