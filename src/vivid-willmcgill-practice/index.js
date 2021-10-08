@@ -7,10 +7,13 @@ const {COMPONENT_BOOTSTRAPPED} = actionTypes;
 
 const view = (state, helpers) => {
 	const {items} = state.properties;
-
+	//const field  = 'number';
 
 	return (
 		<div>
+			<h1>
+				Will's Header
+			</h1>
 			{items.map((item)=>{
 				return (
 					<p>
@@ -28,9 +31,11 @@ createCustomElement('vivid-willmcgill-practice', {
 	actionHandlers:{
 		[COMPONENT_BOOTSTRAPPED]: (coeffects) =>{
 			const {dispatch} = coeffects;
+			const {state} = coeffects;
+			const {field} = state.properties;
 
 			dispatch('GET_THINGS', {
-				field: 'number'
+				field: field
 			});
 		},
 
@@ -46,6 +51,7 @@ createCustomElement('vivid-willmcgill-practice', {
 			const {updateProperties} = coeffects;
 			const {items} = coeffects.action.payload.result;
 			
+			
 			updateProperties({
 				items: items
 			})
@@ -57,6 +63,9 @@ createCustomElement('vivid-willmcgill-practice', {
 	properties: {
 		items:{
 			default:[1,2,3]
+		},
+		field:{
+			default: "number"
 		}
 	},
 	styles

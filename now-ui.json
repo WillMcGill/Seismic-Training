@@ -4,11 +4,30 @@
 	        "innerComponents": [],
 			"uiBuilder": {
 				"associatedTypes": ["global.core", "global.landing-page"],
-				"label": "My Component",
+				"label": "Will Components",
 				"icon": "document-outline",
-				"description": "A description of my component",
+				"description": "Will's practice component",
 				"category": "primitives"
-			}
+			},
+			"properties": [
+                {
+                    "defaultValue": "number",
+                    "description": "Which field do we want",
+                    "fieldType": "string",
+                    "label": "Field",
+                    "managed": false,
+                    "name": "field",
+                    "readOnly": false,
+                    "required": false,
+                    "selectable": false,
+                    "typeMetadata": {
+                        "translatable": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
 	    }
 	},
 	"scopeName": "x_vivid_practice_4"
