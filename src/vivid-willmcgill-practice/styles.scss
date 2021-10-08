@@ -1,0 +1,8 @@
+@import '@servicenow/sass-kit/host';
+
+$color : red;
+
+h1 {
+    color: $color;
+    text-align:center;
+}
